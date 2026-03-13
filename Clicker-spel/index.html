@@ -1,0 +1,50 @@
+<html lang="en"><!--byt till svenska ksk-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--ta bort ksk-->
+    <title>Click Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Click Clicker</h1>
+    </header>
+    <main>
+        <section id="upgrades">
+            <h2>Upgrades</h2>
+            <div id="upgrade-type-select">
+                <div id="click-upgrades-select"></div>
+                <div id="autoclicker-upgrades-select"></div>
+            </div>
+            <div id="click-upgrades">
+                <div class="upgrade" id="clickPowerUpgrade">
+                    <h3>+1 Click Power</h3>
+                    <p class="price"></p>
+                </div>
+            </div>
+            <div id="autoclicker-upgrades">
+                <div class="upgrade" id="autoclicker">
+                    <h3>+1 Autoclicker</h3>
+                    <p class="price"></p>
+                </div>
+                <div class="upgrade" id="autoclickIntervalUpgrade">
+                    <h3>Autoclick Interval -10%</h3>
+                    <p class="price"></p>
+                </div>
+            </div>
+        </section>
+        <section id="stats">
+            <div id="score"></div>
+            <div id="clicks-per-second"></div>
+            <div id="points-per-click"></div>
+
+            <div id="autoclickers"></div>
+            <div id="autoclicks-per-second"></div>
+        </section>
+        <div id="click-target">Click</div>
+        <div id="message-area"></div>
+        <button id="reset">Reset<Br>Progress</button>
+    </main>
+</body>
+</html>
