@@ -7,10 +7,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <!--<header>
         <h1>Click Clicker</h1>
-    </header>
-    <section id="upgrades-window"><div class="border-wrap-1"><div class="border-wrap-2">
+    </header>-->
+
+    <section id="welcome-window" class="window"><div class="border-wrap-1"><div class="border-wrap-2">
+        <div class="windowhead">
+            <div class="window-head-title">
+                <p>Welcome</p>
+            </div>
+            <div class="window-head-buttons">
+                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">--</div></div></div>
+                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">O</div></div></div>
+                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">X</div></div></div>
+            </div>
+        </div>
+        <div id="welcome">
+            <h1>Welcome to Click Clicker</h1>
+        </div>
+    </div></div></section>
+
+    <section id="upgrades-window" class="window"><div class="border-wrap-1"><div class="border-wrap-2">
         <div class="windowhead">
             <div class="window-head-title">
                 <p>Upgrades</p>
@@ -26,7 +43,7 @@
             <div id="click-upgrades-select"></div>
             <div id="autoclicker-upgrades-select"></div>
         </div>-->
-        <div id="upgrades">
+        <div class="border-wrap-3"><div class="border-wrap-4"><div id="upgrades" class="window-content">
             <div id="click-upgrades">
                 <div class="upgrade" id="clickPowerUpgrade">
                     <h3>+1 Click Power</h3>
@@ -43,17 +60,34 @@
                     <p class="price"></p>
                 </div>
             </div>
-        </div>
+        </div></div></div>
 
     </div></div></section>
-    <section id="stats">
-        <div id="score"></div>
-        <div id="clicks-per-second"></div>
-        <div id="points-per-click"></div>
 
-        <div id="autoclickers"></div>
-        <div id="autoclicks-per-second"></div>
-    </section>
+    <section id="stats-window" class="window"><div class="border-wrap-1"><div class="border-wrap-2">
+        <div class="windowhead">
+            <div class="window-head-title">
+                <p>Statistics</p>
+            </div>
+            <div class="window-head-buttons">
+                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">--</div></div></div>
+                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">O</div></div></div>
+                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">X</div></div></div>
+            </div>
+        </div>
+
+        <div class="border-wrap-3"><div class="border-wrap-4"><div id="stats" class="window-content">
+            <div id="score"></div>
+            <div id="clicks-per-second"></div>
+            <div id="points-per-click"></div>
+    
+            <div id="autoclickers"></div>
+            <div id="autoclicks-per-second"></div>
+        </div></div></div>
+    </div></div></section>
+
+
+
     <div id="click-target">Click</div>
     <div id="message-area"></div>
     <button id="reset">Reset<Br>Progress</button>

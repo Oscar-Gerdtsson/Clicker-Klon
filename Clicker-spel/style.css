@@ -36,13 +36,13 @@ body{
 body>*{
     background-color: var(--grey);
 }
-main>*{
-    border-style:outset;
-    
-}
 h3{
     font-size: 20px;
 }
+
+
+/*  Wrappers    */
+
 
 .border-wrap-1{
     border: solid; 
@@ -57,6 +57,20 @@ h3{
     width: auto;
     height: auto;
 }
+.border-wrap-3{
+    border: solid; 
+    border-color: var(--darkgrey) var(--white) var(--white) var(--darkgrey);
+    width: auto;
+    height: auto;
+    background-color: var(--white);
+    margin: 10px;
+}
+.border-wrap-4{
+    border: solid; 
+    border-color: var(--black) var(--grey) var(--grey) var(--black);
+    width: auto;
+    height: auto;
+}
 
 /* Rubrik */
 
@@ -68,9 +82,7 @@ h1{
 /*Main*/
 
 
-#stats{
 
-}
 
 #click-target{
     background-color: var(--grey);
@@ -84,9 +96,10 @@ h1{
     font-size: 30px;
     font-weight: bold;
     user-select:none;
+    cursor:pointer;
 }
 #click-target:active{
-
+    background-color: var(--darkgrey);
 }
 
 #message-area{
@@ -109,21 +122,13 @@ h1{
 }
 
 
+/*  Windows     */
 
 
-
-#upgrades-window{
+.window{
     position: absolute;
     background-color: var(--grey);
-    width: 300px;
-    right: 10px;
-    top: 20px;
     border:none
-}
-.window-head-title{
-    float: left;
-    text-align: center;
-    color: var(--white);
 }
 
 .windowhead{
@@ -135,6 +140,11 @@ h1{
     font-family: "W95fontBold";
     display: flex;
     justify-content: space-between;
+}
+.window-head-title{
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
 }
 
 .window-head-buttons{
@@ -150,23 +160,54 @@ h1{
     padding: 0 3px;
     font-size: 12px;
 }
+.window-content{
+    background-color: var(--white);
+    margin: 5px;
+}
+
+
+/*  Welcome     */
+
+
+#welcome-window{
+    width: 500px;
+    left: 100px;
+    top: 50px;
+
+}
+#welcome{
+    height: 300px;
+}
+
+
+/*  Stats       */
+
+
+#stats-window{
+    width: 250px;
+    left: 600px;
+    top: 70px;
+}
+#stats{
+
+}
+
+/*  Upgrades    */
+
+
+#upgrades-window{
+    width: 350px;
+    right: 10px;
+    top: 20px;
+}
+
 
 
 #upgrade-type-select{
     height: 75px;
 }
-#upgrade-type-select>div{
-
-}
 #upgrades{
     margin: 5px;
-    border-style: solid;
-    border-width: 2px;
-    border-top-color: black;
-    border-left-color: black;
-    border-right-color: white;
-    border-bottom-color: white;
-    background-color: var(--white);
 }
 #upgrades>*{
     background-color: #fff;

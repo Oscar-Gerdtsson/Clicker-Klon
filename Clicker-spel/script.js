@@ -1,5 +1,6 @@
 //  Variables
 let score = 0;
+function getScore(){return Math.floor(score)};
 function getClicksPerSecond(){return Math.floor(10*getClickPower()*autoclicker.amount/0.9**autoclickIntervalUpgrade.amount)/10}
 function getClickPower(){return 1+clickPowerUpgrade.amount};
 function getAutoclickInterval(){return 1000*0.9**autoclickIntervalUpgrade.amount};
@@ -57,27 +58,41 @@ document.getElementById("reset").addEventListener("click", restart);
 
 
 //  On Start
+setInterval(saveProgress, 10000);
 updateDisplay();
 autoclick();
 
 //  Basic Functions
 function updateDisplay(){
-    scoreDisplay.innerHTML = "<b>Clicks: </b>" + score;
+    scoreDisplay.innerHTML = "<b>Clicks: </b>" + getScore();
     clicksPerSecondDisplay.innerHTML = "<b>Per Second: </b>" + getClicksPerSecond();
     clickPowerDisplay.innerHTML = "<b>Click Power: </b>" + getClickPower();
     autoclickersDisplay.innerHTML = "<b>Autoclickers: </b>" + autoclicker.amount;
     autoclickSpeedDisplay.innerHTML = "<b>Autoclick Speed: </b>" + getAutoclickSpeed() + "/s"
-
     upgradesArr.forEach(i => {
-        document.getElementById(i.id).getElementsByClassName("price")[0].innerHTML = "<b>Price: </b>"+i.price+" Clicks";
+        document.getElementById(i.id).getElementsByClassName("price")[0].innerHTML = "<b>Price: </b>"+i.price+" Clicks <b>Amount: </b>"+i.amount;
+    });
+
+}
+function saveProgress(){
+    upgradesArr.forEach(i => {
         localStorage.setItem(i.id+"amount", i.amount)
     });
     localStorage.setItem("score", score);
 }
 function autoclick(){
-    score+=autoclicker.amount*getClickPower();
+    if (getAutoclickInterval()>20) {
+        score+=autoclicker.amount*getClickPower();
+        updateDisplay();
+        setTimeout(autoclick ,getAutoclickInterval())
+    }
+    else{
+        setInterval(autoUpdate, 20);
+    }
+}
+function autoUpdate(){
+    score+=autoclicker.amount*getClickPower()/getAutoclickInterval();
     updateDisplay();
-    setTimeout(autoclick ,getAutoclickInterval())
 }
 function click(){
     score +=getClickPower();
