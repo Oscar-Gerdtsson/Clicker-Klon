@@ -1,8 +1,8 @@
 //  Variables
 let score = 0;
+function getClicksPerSecond(){return Math.floor(10*getClickPower()*autoclicker.amount/0.9**autoclickIntervalUpgrade.amount)/10}
 function getClickPower(){return 1+clickPowerUpgrade.amount};
 function getAutoclickInterval(){return 1000*0.9**autoclickIntervalUpgrade.amount};
-function getClicksPerSecond(){return Math.floor(10*getClickPower()*autoclicker.amount/0.9**autoclickIntervalUpgrade.amount)/10}
 function getAutoclickSpeed(){return Math.round(10/0.9**autoclickIntervalUpgrade.amount)/10};
 
 const scoreDisplay = document.getElementById("score");
@@ -94,3 +94,12 @@ function restart(){
     localStorage.clear();
     location.reload();
 }
+
+
+
+
+
+
+//  testing
+
+
