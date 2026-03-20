@@ -12,7 +12,12 @@
     margin: 0;
     padding: 0;
     user-select:none;
+    border-width: 2px;
     border-style: none;
+
+}
+html{
+    cursor: url(cursor.png), auto;
 }
 :root{
     --black: hsl(0,0%,0%);
@@ -46,14 +51,14 @@ h3{
 
 .border-wrap-1{
     border: solid; 
-    border-color: var(--white) var(--black) var(--black) var(--white);
+    border-color: var(--grey) var(--black) var(--black) var(--grey);
     width: auto;
     height: auto;
     background-color: var(--grey);
 }
 .border-wrap-2{
     border: solid; 
-    border-color: var(--grey) var(--darkgrey) var(--darkgrey) var(--grey);
+    border-color: var(--white) var(--darkgrey) var(--darkgrey) var(--white);
     width: auto;
     height: auto;
 }
@@ -63,7 +68,6 @@ h3{
     width: auto;
     height: auto;
     background-color: var(--white);
-    margin: 10px;
 }
 .border-wrap-4{
     border: solid; 
@@ -71,7 +75,42 @@ h3{
     width: auto;
     height: auto;
 }
+.border-wrap-5{
+    border: solid; 
+    border-color: var(--white) var(--black) var(--black) var(--white);
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--grey);
 
+}
+.border-wrap-6{
+    border: solid; 
+    border-color: var(--grey) var(--darkgrey) var(--darkgrey) var(--grey);
+    width: fit-content;
+    height: fit-content;
+}
+.border-wrap-7{
+    border: solid; 
+    border-color: var(--white);
+    width: auto;
+    height: auto;
+}
+.border-wrap-7:hover{
+    border:dotted;
+    border-color: black
+}
+.border-wrap-7:hover>*{
+    background-color: var(--blue);
+    color: #fff;
+}
+.border-wrap-8{
+    width: fit-content;
+    height: fit-content;
+    border: solid;
+    border-color: transparent;
+    margin: auto;
+}
+.border-wrap-8:hover{border-color: black;}
 /* Rubrik */
 
 h1{
@@ -84,23 +123,7 @@ h1{
 
 
 
-#click-target{
-    background-color: var(--grey);
-    width: 200px;
-    height: 60px;
 
-    margin: 30px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: bold;
-    user-select:none;
-    cursor:pointer;
-}
-#click-target:active{
-    background-color: var(--darkgrey);
-}
 
 #message-area{
 
@@ -127,6 +150,7 @@ h1{
 
 .window{
     position: absolute;
+    
     background-color: var(--grey);
     border:none
 }
@@ -162,7 +186,7 @@ h1{
 }
 .window-content{
     background-color: var(--white);
-    margin: 5px;
+    margin: 10px;
 }
 
 
@@ -171,22 +195,36 @@ h1{
 
 #welcome-window{
     width: 500px;
-    left: 100px;
-    top: 50px;
+    left: 400px;
+    top: 4vh;
 
 }
 #welcome{
     height: 300px;
 }
+#click-target{
+    background-color: var(--grey);
+    width: 200px;
+    height: 60px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    user-select:none;
+}
+#click-target:active{
+    background-color: var(--darkgrey);
+}
 
 /*  Stats       */
 
 
 #stats-window{
     width: 250px;
-    left: 600px;
-    top: 70px;
+    left: 340px;
+    top: 45vh;
 }
 #stats{
 
@@ -198,7 +236,7 @@ h1{
 #upgrades-window{
     width: 350px;
     right: 10px;
-    top: 20px;
+    top: 8vh;
 }
 
 
@@ -207,24 +245,40 @@ h1{
     height: 75px;
 }
 #upgrades{
-    margin: 5px;
 }
 #upgrades>*{
     background-color: #fff;
 }
 .upgrade{
     background-color: inherit;
-    margin: 3px 0;
     height: 60px;
+    padding: 5px;
 }
 
 
-#foot{
-    width: 100%;
-    height: 7vh;
+footer{
     position: absolute;
     bottom: 0%;
-    background-color: var(--grey);
+    width: 100%;
+    height: 60px;
     margin: 0;
+    padding-top: 2px;
+    background-color: var(--grey);
 }
+#test{
+    border-top: solid #fff;
+    width: 100%;
+}
+#flexdiv{
+    display: flex;
+    float: left;
+}
+#flexdiv>*{
+    margin: 2px;
+}
+#save-button, #reset-button{
+    height: 40px;
+    width: 80px;
+}
+
 

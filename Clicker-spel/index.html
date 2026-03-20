@@ -17,13 +17,17 @@
                 <p>Welcome</p>
             </div>
             <div class="window-head-buttons">
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">--</div></div></div>
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">O</div></div></div>
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">X</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">--</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">O</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">X</div></div></div>
             </div>
         </div>
+        
         <div id="welcome">
             <h1>Welcome to Click Clicker</h1>
+            <div class="border-wrap-8"><div class="border-wrap-5"><div class="border-wrap-6">
+                <div id="click-target">Click</div>
+            </div></div></div>
         </div>
     </div></div></section>
 
@@ -33,9 +37,9 @@
                 <p>Upgrades</p>
             </div>
             <div class="window-head-buttons">
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">--</div></div></div>
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">O</div></div></div>
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">X</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">--</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">O</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">X</div></div></div>
             </div>
         </div>
         
@@ -43,22 +47,22 @@
             <div id="click-upgrades-select"></div>
             <div id="autoclicker-upgrades-select"></div>
         </div>-->
-        <div class="border-wrap-3"><div class="border-wrap-4"><div id="upgrades" class="window-content">
+        <div id="upgrades" class="window-content"><div class="border-wrap-3"><div class="border-wrap-4">
             <div id="click-upgrades">
-                <div class="upgrade" id="clickPowerUpgrade">
+                <div class="border-wrap-7"><div class="upgrade" id="clickPowerUpgrade">
                     <h3>+1 Click Power</h3>
                     <p class="price"></p>
-                </div>
+                </div></div>
             </div>
             <div id="autoclicker-upgrades">
-                <div class="upgrade" id="autoclicker">
+                <div class="border-wrap-7"><div class="upgrade" id="autoclicker">
                     <h3>+1 Autoclicker</h3>
                     <p class="price"></p>
-                </div>
-                <div class="upgrade" id="autoclickIntervalUpgrade">
+                </div></div>
+                <div class="border-wrap-7"><div class="upgrade" id="autoclickIntervalUpgrade">
                     <h3>Autoclick Interval -10%</h3>
                     <p class="price"></p>
-                </div>
+                </div></div>
             </div>
         </div></div></div>
 
@@ -70,27 +74,38 @@
                 <p>Statistics</p>
             </div>
             <div class="window-head-buttons">
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">--</div></div></div>
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">O</div></div></div>
-                <div class="border-wrap-1"><div class="border-wrap-2"><div class="window-head-button">X</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">--</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">O</div></div></div>
+                <div class="border-wrap-5"><div class="border-wrap-6"><div class="window-head-button">X</div></div></div>
             </div>
         </div>
 
-        <div class="border-wrap-3"><div class="border-wrap-4"><div id="stats" class="window-content">
-            <div id="score"></div>
-            <div id="clicks-per-second"></div>
-            <div id="points-per-click"></div>
-    
-            <div id="autoclickers"></div>
-            <div id="autoclicks-per-second"></div>
+        <div id="stats" class="window-content"><div class="border-wrap-3"><div class="border-wrap-4">
+            <table>
+                <tr id="score"><td>Clicks:</td><td></td></tr>
+                <tr id="clicks-per-second"><td>Per Second:</td><td></td></tr>
+                <tr id="points-per-click"><td>Click Power:</td><td></td></tr>
+                <tr id="autoclickers"><td>Autoclickers:</td><td></td></tr>
+                <tr id="autoclicks-per-second"><td>Autoclick Speed:</td><td></td></tr>
+            </table>
         </div></div></div>
     </div></div></section>
 
 
 
-    <div id="click-target">Click</div>
+
     <div id="message-area"></div>
-    <button id="reset">Reset<Br>Progress</button>
-    <div id="foot"></div>
+
 </body>
+<footer>
+    <div id="test"></div>
+    <div id="flexdiv">
+        <div class="border-wrap-8"><div class="border-wrap-5"><div class="border-wrap-6">
+         <div id="save-button">Save Progress</div>
+      </div></div></div>
+       <div class="border-wrap-8"><div class="border-wrap-5"><div class="border-wrap-6">
+           <div id="reset-button">Reset Progress</div>
+       </div></div></div>
+    </div>
+</footer>
 </html>

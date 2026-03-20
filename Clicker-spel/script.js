@@ -6,11 +6,11 @@ function getClickPower(){return 1+clickPowerUpgrade.amount};
 function getAutoclickInterval(){return 1000*0.9**autoclickIntervalUpgrade.amount};
 function getAutoclickSpeed(){return Math.round(10/0.9**autoclickIntervalUpgrade.amount)/10};
 
-const scoreDisplay = document.getElementById("score");
-const clicksPerSecondDisplay = document.getElementById("clicks-per-second");
-const clickPowerDisplay = document.getElementById("points-per-click");
-const autoclickersDisplay = document.getElementById("autoclickers");
-const autoclickSpeedDisplay = document.getElementById("autoclicks-per-second");
+const scoreDisplay = document.getElementById("score").lastElementChild;
+const clicksPerSecondDisplay = document.getElementById("clicks-per-second").lastElementChild;
+const clickPowerDisplay = document.getElementById("points-per-click").lastElementChild;
+const autoclickersDisplay = document.getElementById("autoclickers").lastElementChild;
+const autoclickSpeedDisplay = document.getElementById("autoclicks-per-second").lastElementChild;
 const targetArea = document.getElementById("click-target");
 const messageArea = document.getElementById("message-area");
 
@@ -54,7 +54,8 @@ document.getElementById(upgradesArr[0].id).addEventListener("click", function(){
 document.getElementById(upgradesArr[1].id).addEventListener("click", function(){buyUpgrade(upgradesArr[1])});
 document.getElementById(upgradesArr[2].id).addEventListener("click", function(){buyUpgrade(upgradesArr[2])});
 
-document.getElementById("reset").addEventListener("click", restart);
+document.getElementById("reset-button").addEventListener("click", resetProgress);
+document.getElementById("save-button").addEventListener("click", saveProgress);
 
 
 //  On Start
@@ -64,11 +65,11 @@ autoclick();
 
 //  Basic Functions
 function updateDisplay(){
-    scoreDisplay.innerHTML = "<b>Clicks: </b>" + getScore();
-    clicksPerSecondDisplay.innerHTML = "<b>Per Second: </b>" + getClicksPerSecond();
-    clickPowerDisplay.innerHTML = "<b>Click Power: </b>" + getClickPower();
-    autoclickersDisplay.innerHTML = "<b>Autoclickers: </b>" + autoclicker.amount;
-    autoclickSpeedDisplay.innerHTML = "<b>Autoclick Speed: </b>" + getAutoclickSpeed() + "/s"
+    scoreDisplay.innerHTML = getScore();
+    clicksPerSecondDisplay.innerHTML = getClicksPerSecond();
+    clickPowerDisplay.innerHTML = getClickPower();
+    autoclickersDisplay.innerHTML = autoclicker.amount;
+    autoclickSpeedDisplay.innerHTML = getAutoclickSpeed() + "/s"
     upgradesArr.forEach(i => {
         document.getElementById(i.id).getElementsByClassName("price")[0].innerHTML = "<b>Price: </b>"+i.price+" Clicks <b>Amount: </b>"+i.amount;
     });
@@ -105,7 +106,7 @@ function buyUpgrade(id){
         updateDisplay();
     }
 }
-function restart(){
+function resetProgress(){
     localStorage.clear();
     location.reload();
 }
