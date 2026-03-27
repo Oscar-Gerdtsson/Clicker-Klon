@@ -4,10 +4,6 @@ Beskrivning:
 
 I spelet så klickar man på en knapp för att få clicks som man använder för att köpa upgraderingar som ger en mer clicks, målet är att få clicks.
 
-Hur spelet fungerar:
-
-
-
 
 Teknik och lösningar:
 
