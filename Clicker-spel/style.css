@@ -7,6 +7,7 @@
     font-family: "W95fontBold";
     src: url("W95font-Bold.otf");
 }
+
 /* Grundstil */
 *{
     margin: 0;
@@ -14,7 +15,6 @@
     user-select:none;
     border-width: 2px;
     border-style: none;
-
 }
 html{
     cursor: url(cursor.png), auto;
@@ -41,12 +41,16 @@ body{
 body>*{
     background-color: var(--grey);
 }
+h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
 h3{
     font-size: 20px;
 }
 
 
-/*  Wrappers    */
+/*  Wrappers  */
 
 
 .border-wrap-1{
@@ -111,41 +115,9 @@ h3{
     margin: auto;
 }
 .border-wrap-8:hover{border-color: black;}
-/* Rubrik */
-
-h1{
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
-/*Main*/
 
 
-
-
-
-
-#message-area{
-
-}
-
-
-
-#reset{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 30px;
-    width: 70px;
-    height: 70px;
-    border-radius: 70px;
-    border: none;
-    background-color: var(--grey);
-    font-weight: bold;
-}
-
-
-/*  Windows     */
+/*  Windows  */
 
 
 .window{
@@ -220,14 +192,10 @@ h1{
 
 /*  Stats       */
 
-
 #stats-window{
     width: 250px;
-    left: 340px;
+    left: 300px;
     top: 45vh;
-}
-#stats{
-
 }
 
 /*  Upgrades    */
@@ -239,13 +207,10 @@ h1{
     top: 8vh;
 }
 
-
-
 #upgrade-type-select{
     height: 75px;
 }
-#upgrades{
-}
+
 #upgrades>*{
     background-color: #fff;
 }
