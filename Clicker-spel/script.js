@@ -81,11 +81,10 @@ function updateDisplay(){//uppdaterar stats m.m.
     autoclickSpeedDisplay.innerHTML = shortenLength(getAutoclickSpeed()) + "/s"
     document.getElementById("clickPowerPlusUpgrade").firstElementChild.innerHTML ="+"+shortenLength(getClickPowerEfficiency())+" Click Power"
 
+    setAutoclickerInflation();// gör detta här för jag behöver skriva om mycket för att göra det på ett mer effektivt sätt
     upgradesArr.forEach(i => {
         document.getElementById(i.id).getElementsByClassName("price")[0].innerHTML = "<b>Price: </b>"+i.price+" Clicks <b>Amount: </b>"+i.amount;
     });
-
-    setAutoclickerInflation();// gör detta här för jag behöver skriva om mycket för att göra det på ett mer effektivt sätt
 }
 function saveProgress(){//sparar progress i localstorage
     upgradesArr.forEach(i => {
