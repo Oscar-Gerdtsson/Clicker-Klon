@@ -172,7 +172,8 @@ h3{
 
 }
 #welcome{
-    height: 300px;
+    margin:30px;
+    height: 200px;
 }
 #click-target{
     background-color: var(--grey);
@@ -219,8 +220,26 @@ h3{
     height: 60px;
     padding: 5px;
 }
+/*Pop-ups*/
 
-/*footer*/
+#popup-window{
+    position:absolute;
+    top: 50px;
+    left:50px;
+    width: 300px;
+    display: none;
+}
+#popup{
+    margin-bottom: 10px;
+}
+#popup-info{
+    margin: 10px;
+}
+#popup-claim{
+    margin: 10px;
+}
+
+/*Footer*/
 
 footer{
     position: absolute;
